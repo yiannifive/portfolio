@@ -1,0 +1,24 @@
+{
+	"date": "2011-12-01 00:00:00",
+	"client": "TedXBaltimore",
+	"project": "Organization Website",
+	"link": "http://www.tedxbaltimore.com",
+	"link_display": "tedxbaltimore.com",
+	"agency": "Fastspot",
+	"agency_link": "http://www.fastspot.com",
+	"role": "Designer, Developer",
+	"images": [
+		{
+			"file": "{base_url}/files/portfolio/01-wide.png"
+		},
+		{
+			"file": "{base_url}/files/portfolio/02-tablet.png"
+		},
+		{
+			"file": "{base_url}/files/portfolio/03-small.png"
+		},
+		{
+			"file": "{base_url}/files/portfolio/04-phone.png"
+		}
+	]
+}

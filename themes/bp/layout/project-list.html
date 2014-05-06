@@ -1,0 +1,8 @@
+{% for project in navigation.work.children %}
+<article class="min-full mobile-half tablet-third desktop-4">
+	<a href="{{ project.url }}" class="project">
+		<h3>{{ project.title }}</h3>
+		<img src="{{ project.cover }}">
+	</a>
+</article>
+{% endfor %}

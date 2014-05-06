@@ -1,0 +1,24 @@
+{% include 'layout/header.html' %}
+<div class="row">
+	<header class="block intro list">
+		<div class="mobile-full tablet-full desktop-10 desktop-push-1">
+			<h1>{{ meta.title }}</h1>
+			<p class="emphasized">{{ meta.description }}</p>
+		</div>
+	</header>
+	<hr class="mobile-full tablet-full desktop-10 desktop-push-1">
+	<div class="block">
+		<div class="mobile-full tablet-full desktop-10 desktop-push-1">
+			{% for page in navigation.thoughts.children %}
+			<article class="listed">
+				<a href="{{ page.url }}">
+					<h2>{{ page.title }}</h2>
+					<time>{{ page.date_formatted }}</time>
+					<p>{{ page.content|split('</p>')[0]|striptags }}</p>
+				</a>
+			</article>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% include 'layout/footer.html' %}

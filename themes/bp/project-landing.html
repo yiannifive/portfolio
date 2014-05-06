@@ -1,0 +1,14 @@
+{% include 'layout/header.html' %}
+<div class="row">
+	<header class="block intro">
+		<div class="mobile-full tablet-full desktop-10 desktop-push-1">
+			<h1>{{ meta.title }}</h1>
+			<p class="emphasized">{{ meta.description }}</p>
+		</div>
+	</header>
+	<hr class="mobile-full tablet-full desktop-10 desktop-push-1">
+	<section class="block work margined">
+		{% include 'layout/project-list.html' %}
+	</section>
+</div>
+{% include 'layout/footer.html' %}

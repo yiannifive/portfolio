@@ -1,0 +1,11 @@
+<div class="navigation">
+	<nav>
+		<h4><a href="{{ base_url }}/work">Work</a></h4>
+		{% include "layout/navigation-loop.html" with {'navigation': navigation.work.children} %}
+<!--
+		<br>
+		<h4><a href="{{ base_url }}/thoughts">Thoughts</a></h4>
+		{% include "layout/navigation-loop.html" with {'navigation': navigation.thoughts.children} %}
+-->
+	</nav>
+</div>

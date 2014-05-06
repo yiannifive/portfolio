@@ -1,0 +1,21 @@
+{% include 'layout/header.html' %}
+<div class="row">
+	<header class="block intro">
+		<div class="mobile-full tablet-full desktop-10 desktop-push-1">
+			<h1>{{ meta.title }}</h1>
+		</div>
+	</header>
+	<hr class="mobile-full tablet-full desktop-10 desktop-push-1 margin_top">
+	<div class="block article">
+		<div class="mobile-full tablet-full desktop-10 desktop-push-1">
+			{{ content }}
+		</div>
+	</div>
+	{% if next_page.url %}
+	<a href="{{ next_page.url }}">Next</a>
+	{% endif %}
+	{% if prev_page.url %}
+	<a href="{{ prev_page.url }}">Previous</a>
+	{% endif %}
+</div>
+{% include 'layout/footer.html' %}

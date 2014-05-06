@@ -1,0 +1,333 @@
+/*---------------------------
+  Transitions
+---------------------------*/
+	*, *:link, *:visited, *:hover, *:active, *:focus {
+		-webkit-transition: background-color 0.15s linear, border-color 0.15s linear, color 0.15s linear, opacity 0.15s linear;
+			 	transition: background-color 0.15s linear, border-color 0.15s linear, color 0.15s linear, opacity 0.15s linear;
+	}
+
+/*---------------------------
+  Elements
+---------------------------*/
+	html { font-size: 1px; }
+	body { background: #f9f9f9; color: $textGray; $ptSerif; font-size: 16px; font-size: 16rem; min-width: 300px; }
+	body * { word-wrap: break-word; }
+
+	::selection,
+	::-moz-selection { background: #eee; text-shadow: none; }
+
+	h1, h2, h3, h4, h5, h6 { $ptSans; margin: 30px 0; line-height: 1.2; }
+	h1 { color: $black; font-size: 46rem; font-size: 46rem; font-weight: 700; line-height: 1; }
+	h2 { color: $blue; font-size: 34px; font-size: 34px; font-weight: 700; }
+	h3 { color: $black; font-size: 26px; font-size: 26rem; }
+	h4 { color: $blue; font-size: 14px; font-size: 14rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; }
+	h5 { }
+	h6 { }
+
+	a { color: $blue; text-decoration: none; }
+	a:hover { }
+	em { }
+	strong { }
+	p { color: $textGray; font-size: 18px; font-size: 18rem; margin: 30px 0; line-height: 1.7; }
+	p.emphasized { color: $textGray; font-size: 20px; font-size: 20rem; font-style: italic; }
+	p.blue { color: $blue; }
+
+	p a { border-bottom: 1px solid #bbb; color: $textGray; }
+
+	ol, ul { margin: 0 0 25px 0; padding: 0 0 0 40px; }
+	li { font-size: 18px; font-size: 18rem; line-height: 1.5; margin: 10px 0 0; position: relative; }
+	ol { }
+	ol li { }
+	ul { list-style: none; }
+	ul li { }
+	ul li:before { background: $lightGray; border-radius: 100%; content: ''; display: block; height: 5px; left: -15px; position: absolute; top: 10px; width: 5px; }
+
+	hr { background: $lineGray; border: none; clear: both; float: none !important; height: 1px; margin-top: 30px; margin-bottom: 30px; width: 100%; }
+	hr.margin_top { margin-bottom: 0; }
+	hr.margin_bottom { margin-top: 0; }
+
+	audio, canvas, img, svg, video { vertical-align: middle; }
+
+	fieldset { border: 0; margin: 0; padding: 0; }
+	textarea { resize: vertical; }
+
+	pre, code { color: #333; $ptMono; font-size: 14px; font-size: 14rem; }
+	pre { background: #fff; border-left: 3px solid $blue; margin: 0 0 25px; overflow-y: auto; padding: 20px; }
+
+	textarea { }
+
+	.table_wrapper,
+	.option_table_wrapper { overflow-y: auto; margin: 25px 0; width: 100%; }
+	table { min-width: 500px; width: 100%; }
+	table th { color: $blue; cursor: pointer; $ptSans; font-size: 12px; font-size: 12rem; letter-spacing: 0.2em; padding: 0 15px 10px; text-align: left; text-transform: uppercase; }
+	table td { $ptSans; font-size: 16px; font-size: 16rem; line-height: 1.5; padding: 13px 15px 15px; }
+	table tr:nth-child(odd) td { background: $white; }
+	table .option { width: 175px; }
+	table .default { width: 175px; }
+
+	time { color: $lightGray; display: block; $ptSans; font-size: 14px; font-size: 14rem; font-weight: 400; letter-spacing: 0.2em; margin: 0 0 5px; text-transform: uppercase; }
+
+
+/*-------------------------------------------
+  Helpers
+-------------------------------------------*/
+	.left,
+	.block_left { float: left; }
+	.block_left { margin: 0 20px 20px 0; }
+	.right,
+	.block_right { float: right; }
+	.block_right { margin: 0 0 20px 20px; }
+
+	.clear { clear: both; }
+	.clearfix:after { clear: both; content: "."; display: block; height: 0; line-height: 0; visibility: hidden; }
+	.contain { overflow: hidden; }
+
+	.no_select,
+	.no_select * {
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+			-ms-user-select: none;
+				user-select: none;
+	}
+
+	.hidden { display: none !important; visibility: hidden; }
+	.visually_hidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+	.visually_hidden.focusable:active,
+	.visually_hidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+	.invisible { visibility: hidden; }
+
+/*-------------------------------------------
+  Mobile - Min
+-------------------------------------------*/
+	#progress { background: $blue; height: 2px; left: 0; opacity: 0; position: fixed; top: 0; width: 0; z-index: 6;
+		-webkit-transition: width 0.2s ease-out, opacity 0.2s linear;
+		   	 	transition: width 0.2s ease-out, opacity 0.2s linear;
+	}
+	#progress.visible { opacity: 1; }
+
+	#pronto {
+		-webkit-transition: opacity 0.25s linear;
+			 	transition: opacity 0.25s linear;
+	}
+	#pronto.loading { opacity: 0.5; pointer-events: none; }
+
+	.button { background: $blue; color: #fff; cursor: pointer; display: block; $ptSans; font-size: 14px; font-size: 14rem; height: 41px; letter-spacing: 0.2em; line-height: 39px; margin: 0 0 10px 0; text-align: center; text-transform: uppercase; }
+
+
+	.shifter .shifter-page { background: #f9f9f9; box-shadow: none; }
+	.shifter .navigation { background: $white; }
+
+	.navigation { padding: 25px 30px; }
+	.navigation h4 { font-size: 12px; font-size: 12rem; line-height: 15px; margin: 0 0 10px; }
+	.navigation h4 a,
+	.navigation h4 a.active,
+	.navigation h4 a:hover { color: $blue; }
+	.navigation a { color: $textGray; display: block; padding: 5px 0; }
+	.navigation a.active { color: $blue; }
+
+	.social a.social { color: $blue; cursor: pointer; display: block; $ptSans; font-size: 12px; font-size: 12rem; letter-spacing: 0.2em; line-height: 25px; margin: 0 0 15px; overflow: hidden; text-transform: uppercase; }
+	.social a.social:before { background: url(../images/icons.svg) no-repeat 0 0; content: ''; display: block; float: left; height: 26px; margin: 0 15px 0 0; overflow: hidden; vertical-align: middle; width: 27px; }
+	.social a.github:before { background-position: -39px 0; }
+	.social a.twitter:before { background-position: -80px 1px; }
+	.social a.email:before { background-position: -120px 1px }
+
+	#header .logo { color: $lightGray; cursor: pointer; $ptSans; font-size: 12px; font-size: 12rem; letter-spacing: 0.2em; left: 25px; line-height: 15px; position: absolute; text-transform: uppercase; top: 25px; }
+	#header .shifter-handle { background: url(../images/icons.svg) no-repeat; display: block; float: left; height: 20px; margin: 0; overflow: hidden; position: absolute; right: 25px; text-indent: -99999px; top: 25px; vertical-align: middle; width: 20px;  }
+
+	#footer { color: $lightGray; $ptSerif; font-size: 12px; font-size: 12rem; line-height: 1.6; letter-spacing: 0.1em; margin-top: 30px; margin-bottom: 50px; text-align: center; /*  text-transform: uppercase; */ }
+	#footer .copyright { border-top: 1px solid $lineGray; padding: 30px 0 0; }
+
+	.block:after { clear: both; content: "."; display: block; height: 0; line-height: 0; visibility: hidden; }
+
+	.block.margined { margin-top: 50px; }
+
+	.block.intro { margin-top: 75px; }
+
+	.header { border-bottom: 1px solid $lineGray; padding: 0 0 25px; }
+
+	.block.home h4 { color: $gray; margin-top: 10px; }
+
+	.block.intro h1 { margin: 20px 0 30px; }
+	.block.intro h3 { margin-top: 10px; }
+	.block.intro p { margin: 10px 0 10px; }
+
+	.block.intro .links,
+	.block.intro .meta { margin-top: 15px; }
+	.block.intro .meta h4 { font-size: 12px; font-size: 12rem; margin: 0 0 5px; }
+	.block.intro .meta p { font-size: 16px; font-size: 16rem; font-style: italic; margin: 5px 0 20px; }
+
+	/* .block.list h1 { color: $lightGray; } */
+
+	.block.work { clear: both; }
+	.block.work .project { display: block; margin-bottom: 7px; overflow: hidden; position: relative; }
+	.block.work .project img { display: block; width: 100%; }
+	.block.work .project h3 { bottom: 0; color: $white; font-size: 26px; font-size: 26px; left: 0; margin: 0; padding: 30px; position: absolute; width: 100%; z-index: 2; }
+	.block.work .project:after { content: ''; height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: 1;
+		background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 90%);
+		background-image:         linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 90%);
+	}
+
+	.block.screenshots {  }
+	.block.screenshots img { display: block; margin: 20px auto; max-width: 100%; }
+	.block.screenshots .positioner { position: relative; }
+	.block.screenshots .positioner.static { position: static; }
+	.block.screenshots .pagination { border: none; left: -32px; padding: 0; position: absolute; top: 40px; width: 12px; }
+	.block.screenshots .pagination .page { background: #ccc; border-radius: 100%; cursor: pointer; display: block; height: 12px; margin: 0 0 10px; text-indent: -99999px; width: 12px; }
+	.block.screenshots .pagination .page.active { background: $gray; }
+
+	.pagination { border-top: 1px solid $lineGray; clear: both; margin: 25px 0 0; padding: 30px 0 0; }
+	.pagination:after { clear: both; content: "."; display: block; height: 0; line-height: 0; visibility: hidden; }
+	.pagination a { color: $textGray; display: block; $ptSans; font-size: 12px; font-size: 12rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; }
+	.pagination .previous { float: right; text-align: right; }
+	.pagination .next { float: left; }
+
+	.pagination .previous:before,
+	.pagination .next:before { border: 6px solid transparent; content: ''; display: block; height: 0; margin-top: 1px; width: 0; }
+	.pagination .next:before { border-right-color: $gray; float: left; margin-right: 15px; }
+	.pagination .previous:before { border-left-color: $gray; float: right; margin-left: 15px; }
+
+
+	.listed { margin: 30px 0; }
+	.listed:first-child { margin-top: 0; }
+	.listed:last-child { margin-bottom: 20px; }
+	.listed h2 { margin: 0 0 15px; }
+	.listed p { margin: 15px 0 0; }
+
+
+/*-------------------------------------------
+  Mobile
+-------------------------------------------*/
+	@media screen and (min-width: 350px) and (max-width: 500px) {
+		/* .gridlock .block.work .min-full { width: 47.9167%; } */
+	}
+
+	@media screen and (min-width: 500px) {
+		.block.work .project { margin-bottom: 10px; }
+
+		h1 { font-size: 56rem; font-size: 56rem; }
+	}
+
+	@media screen and (max-width: 500px) {
+		.gridlock .row { width: calc(100% - 40px); min-width: 300px; }
+	}
+
+	@media screen and (max-width: 739px) {
+		.block.screenshots .pagination { display: none; }
+
+		.pagination .next,
+		.pagination .previous { height: 40px; overflow: hidden; padding: 5px 10px; text-indent: 200%; white-space: nowrap; width: 40px; }
+		.pagination .next:before,
+		.pagination .previous:before { border-width: 15px; margin: 0; }
+		.pagination .next:before { margin-left: -10px; }
+		.pagination .previous:before { margin-right: -10px; }
+
+		.social a.social { float: left; height: 27px; margin: 0 20px 0 0; text-indent: -99999px; width: 27px; }
+
+
+		.block.intro .meta h4 { clear: left; float: left; line-height: 2.5; margin-top: 5px; width: 80px; }
+		.block.intro .meta p { float: left; margin: 5px 0; }
+	}
+
+	@media screen and (min-width: 500px) and (max-width: 739px) {
+		.social a.button { float: left; width: 49%; }
+		.social a.button:nth-child(2) { float: right; }
+	}
+
+/*-------------------------------------------
+  Tablet
+-------------------------------------------*/
+	@media screen and (min-width: 740px) {
+		.block.intro { margin-top: 125px; }
+
+		.block.intro .links,
+		.block.intro .meta { padding-left: 25px; }
+
+		.block.intro .links,
+		.block.intro .meta { margin-top: 110px; }
+
+		.block.work .project { margin-bottom: 15px; }
+	}
+
+/*-------------------------------------------
+  Desktop
+-------------------------------------------*/
+	@media screen and (min-width: 980px) {
+		p a:hover { border-color: $blue; color: $blue; }
+
+		.button:hover { background: $black; }
+
+		.navigation a:hover { color: $blue; }
+
+		.block.intro .links,
+		.block.intro .meta { padding-left: 20px; }
+
+		.block.work .project { margin-bottom: 18px; }
+
+		.pagination a:hover { color: $blue; }
+	}
+
+/*-------------------------------------------
+  Desktop - Max
+-------------------------------------------*/
+	@media screen and (min-width: 1220px) {
+
+	}
+
+/*-------------------------------------------
+  Desktop - Min
+-------------------------------------------*/
+	@media screen and (min-width: 980px) {
+		.gridlock .row { width: 920px; }
+	}
+
+/*-------------------------------------------
+  IE8/9/10 - http://blog.keithclark.co.uk/moving-ie-specific-css-into-media-blocks/
+-------------------------------------------*/
+	@media screen\0 {
+
+	}
+
+/*-------------------------------------------
+  IE9/10 - http://blog.keithclark.co.uk/moving-ie-specific-css-into-media-blocks/
+-------------------------------------------*/
+	@media screen and (min-width:0\0) {
+
+	}
+
+/*-------------------------------------------
+  IE10/11 - https://gist.github.com/atk/4025104
+-------------------------------------------*/
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+	}
+
+/*-------------------------------------------
+  Print
+-------------------------------------------*/
+	@media print {
+	    * { background: transparent !important; box-shadow: none !important; color: #000 !important; text-shadow: none !important; }
+
+	    a, a:visited { text-decoration: underline; }
+	    a[href]:after { content: " (" attr(href) ")"; }
+	    abbr[title]:after { content: " (" attr(title) ")"; }
+
+	    a[href^="javascript:"]:after,
+	    a[href^="#"]:after { content: ""; }
+
+	    pre,
+	    blockquote { border: 1px solid #999; page-break-inside: avoid; }
+
+	    thead { display: table-header-group; }
+
+	    tr,
+	    img { page-break-inside: avoid; }
+
+	    img { max-width: 100% !important; }
+
+	    p,
+	    h2,
+	    h3 { orphans: 3; widows: 3; }
+
+	    h2,
+	    h3 { page-break-after: avoid; }
+	}

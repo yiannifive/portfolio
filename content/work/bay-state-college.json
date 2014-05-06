@@ -1,0 +1,30 @@
+{
+	"date": "2011-12-01 00:00:00",
+	"client": "Bay State College",
+	"project": "Digital Viewbook",
+	"link": "http://driven.baystate.edu",
+	"link_display": "driven.baystate.edu",
+	"agency": "Fastspot",
+	"agency_link": "http://www.fastspot.com",
+	"role": "Developer",
+	"images": [
+		{
+			"file": "{base_url}/files/portfolio/01-home-2.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/02-entertainment.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/03-business.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/04-graph.jpg"
+		},
+		{
+			"file":"{base_url}/files/portfolio/05-faculty.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/06-map.jpg"
+		}
+	]
+}

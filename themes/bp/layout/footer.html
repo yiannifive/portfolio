@@ -1,0 +1,16 @@
+{% if not meta.pronto %}
+</div>
+			<footer id="footer" class="row">
+				<div class="mobile-full tablet-full desktop-10 desktop-push-1 copyright">
+					Made with &hearts; in Hampden<br />Copyright MMXIII
+				</div>
+			</footer>
+		</div>
+		<div class="shifter-navigation mobile">
+			{% include 'layout/navigation.html' %}
+		</div>
+		<div id="progress"></div>
+		<script src="{{ base_url }}/js/site.js"></script>
+	</body>
+</html>
+{% endif %}

@@ -1,0 +1,30 @@
+{
+	"date": "2012-10-01 00:00:00",
+	"client": "Goucher College",
+	"project": "Virtual Tour",
+	"link": "http://tour.goucher.edu",
+	"link_display": "tour.goucher.edu",
+	"agency": "Fastspot",
+	"agency_link": "http://www.fastspot.com",
+	"role": "Developer",
+	"images": [
+		{
+			"file": "{base_url}/files/portfolio/01_main.png"
+		},
+		{
+			"file": "{base_url}/files/portfolio/02_campus.png"
+		},
+		{
+			"file": "{base_url}/files/portfolio/03_popup.png"
+		},
+		{
+			"file": "{base_url}/files/portfolio/04_world.png"
+		},
+		{
+			"file": "{base_url}/files/portfolio/05_mobile.png"
+		},
+		{
+			"file": "{base_url}/files/portfolio/07_mobile_detail.png"
+		}
+	]
+}

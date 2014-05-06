@@ -1,0 +1,25 @@
+{
+	"date": "2012-08-01 00:00:00",
+	"client": "Post Typography",
+	"project": "Portfolio Website",
+	"link": "http://www.posttypography.com",
+	"link_display": "posttypography.com",
+	"role": "Developer",
+	"images": [
+		{
+			"file": "{base_url}/files/portfolio/01_home.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/02_filtered.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/03_detail.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/04_casestudies.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/06_news.jpg"
+		}
+	]
+}

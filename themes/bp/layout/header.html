@@ -1,0 +1,74 @@
+{% if not meta.pronto %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+    	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<meta name="description" content="{{ meta.description }}">
+		{% if meta.robots %}
+		<meta name="robots" content="{{ meta.robots }}">
+		{% endif %}
+		<meta name="author" content="{{ site_title }}">
+
+		<!-- G+ AND FACEBOOK META TAGS -->
+		<meta property="og:title" content="{{ site_title }}">
+		<meta property="og:url" content="{{ base_url }}">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="{{ base_url }}/images/social.jpg">
+		<meta property="og:description" content="{{ meta.description }}">
+		<meta property="og:site_name" content="{{ site_title }}">
+
+		<!-- TWITTER CARD -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@FormstoneIt">
+		<meta name="twitter:creator" content="@FormstoneIt">
+		<meta name="twitter:url" content="{{ base_url }}">
+		<meta name="twitter:title" content="{{ site_title }}">
+		<meta name="twitter:description" content="{{ meta.description }}">
+		<meta name="twitter:image" content="{{ base_url }}/images/social.jpg">
+
+		<title>{% if meta.title and not is_front_page %}{{ meta.title }} &middot; {% endif %}{{ site_title }}</title>
+
+		<link rel="icon" href="{{ base_url }}/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="{{ base_url }}/favicon.ico" type="image/x-icon">
+
+		<script src="{{ base_url }}/js/modernizr.js"></script>
+
+		<link rel="stylesheet" href="{{ base_url }}/css/site.css" type="text/css" media="all">
+
+		<!--[if IE 8]>
+        	<script>var IE8 = true;</script>
+        	<script src="{{ base_url }}/js/site-ie8.js"></script>
+			<link rel="stylesheet" href="{{ base_url }}/css/site-ie8.css">
+		<![endif]-->
+		<!--[if IE 9]>
+        	<script>var IE9 = true;</script>
+        	<script src="{{ base_url }}/js/site-ie9.js"></script>
+			<link rel="stylesheet" href="{{ base_url }}/css/ie9.css">
+		<![endif]-->
+
+		{% if live %}
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5HBB3F"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5HBB3F');</script>
+		<!-- End Google Tag Manager -->
+
+		<!-- End Google Tag Manager -->
+		{% endif %}
+	</head>
+	<body class="gridlock shifter">
+		<div class="shifter-page">
+			<header id="header">
+				<a href="{{ base_url }}" class="logo">{{ site_title }}</a>
+				<span class="shifter-handle">Navigation</span>
+			</header>
+			<div id="pronto">
+{% endif %}

@@ -1,0 +1,19 @@
+{
+	"date": "2012-07-01",
+	"client": "Sip & Bite",
+	"project": "Restaurant Website",
+	"link": "http://www.sipandbite.com",
+	"link_display": "sipandbite.com",
+	"role": "Developer",
+	"images": [
+		{
+			"file": "{base_url}/files/portfolio/01-home.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/02-history.jpg"
+		},
+		{
+			"file": "{base_url}/files/portfolio/03-shop.jpg"
+		}
+	]
+}

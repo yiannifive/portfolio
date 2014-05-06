@@ -1,0 +1,19 @@
+{
+	"social": [
+		{
+			"title": "Twitter",
+			"link": "http://www.twitter.com/benplum",
+			"class": "twitter"
+		},
+		{
+			"title": "GitHub",
+			"link": "http://github.com/benplum",
+			"class": "github"
+		},
+		{
+			"title": "Email",
+			"link": "mailto:mr@benplum.com",
+			"class": "email"
+		}
+	]
+}

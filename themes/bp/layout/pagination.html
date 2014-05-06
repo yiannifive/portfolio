@@ -1,0 +1,10 @@
+{% if prev_page.url or next_page.url %}
+<div class="pagination mobile-full tablet-full desktop-10 desktop-push-1">
+	{% if next_page.url %}
+	<a href="{{ next_page.url }}" class="next">{{ next_page.title }}</a>
+	{% endif %}
+	{% if prev_page.url %}
+	<a href="{{ prev_page.url }}" class="previous">{{ prev_page.title }}</a>
+	{% endif %}
+</div>
+{% endif %}

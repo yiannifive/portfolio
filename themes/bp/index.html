@@ -1,0 +1,39 @@
+{% include 'layout/header.html' %}
+<div class="row">
+	<header class="block intro">
+		<div class="mobile-full tablet-4 desktop-7 desktop-push-1">
+			<h1>{{ meta.title }}</h1>
+			{{ content }}
+		</div>
+		<div class="mobile-full tablet-2 desktop-3 social links">
+			{% for social in meta.social %}
+			<a href="{{ social.link }}" class="social {{ social.class }}" target="_blank">{{ social.title }}</a>
+			{% endfor %}
+		</div>
+	</header>
+	<hr class="mobile-full tablet-full desktop-10 desktop-push-1">
+	<section class="block home work">
+		<div class="mobile-full tablet-full desktop-11 desktop-push-1">
+			<h4>Work</h2>
+		</div>
+		{% include 'layout/project-list.html' %}
+	</section>
+<!--
+	<hr class="mobile-full tablet-full desktop-10 desktop-push-1">
+	<section class="block home list">
+		<div class="mobile-full tablet-full desktop-11 desktop-push-1">
+			<h4>Thoughts</h2>
+			{% for page in navigation.thoughts.children %}
+			<article class="listed">
+				<a href="{{ page.url }}">
+					<h2>{{ page.title }}</h2>
+					<time>{{ page.date_formatted }}</time>
+					<p>{{ page.content|split('</p>')[0]|striptags }}</p>
+				</a>
+			</article>
+			{% endfor %}
+		</div>
+	</section>
+-->
+</div>
+{% include 'layout/footer.html' %}

@@ -1,0 +1,23 @@
+/*-------------------------------------------
+  IE8
+-------------------------------------------*/
+
+	body { min-width: 980px; overflow: auto; }
+
+	h1 { font-size: 90px; }
+	p.emphasized { font-size: 22px; }
+	p a:hover { border-color: $blue; color: $blue; }
+
+	.button:hover { background: $black; }
+
+	.navigation a:hover { color: $blue; }
+
+	.block.intro .links,
+	.block.intro .meta { padding-left: 20px; }
+
+	.block.work .project { margin-bottom: 18px; }
+
+	.pagination a:hover { color: $blue; }
+
+	.social a.social:before,
+	#header .shifter-handle { background-image: url(../images/icons.png); }
